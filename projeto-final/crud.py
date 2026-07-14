@@ -11,7 +11,11 @@ pwd_context = CryptContext(
 
 # USUARIO --------------------------------------------------
 def criar_usuario(db: Session, usuario: schemas.UsuarioCreate):
+    print(usuario.password)
+    print(len(usuario.password))
+
     senha_hash = pwd_context.hash(usuario.password)
+
     novo_usuario = models.Usuario(
         username=usuario.username,
         email=usuario.email,

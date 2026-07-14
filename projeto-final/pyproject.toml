@@ -11,8 +11,3 @@ dependencies = [
     "passlib[bcrypt]>=1.7.4",
     "pydantic>=2.13.4",
 ]
-
-[tool.uv.workspace]
-members = [
-    "projeto-final",
-]
